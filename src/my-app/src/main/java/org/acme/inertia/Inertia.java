@@ -75,7 +75,7 @@ public class Inertia {
                 JsonNode entry = manifest.get(ENTRY_KEY);
                 entryScript = "/assets/" + entry.get("file").asText();
                 cssFiles = entry.has("css")
-                        ? objectMapper.convertValue(entry.get("css"), new TypeReference<>() {})
+                        ? objectMapper.convertValue(entry.get("css"), new TypeReference<List<String>>() {})
                               .stream().map(css -> "/assets/" + css).toList()
                         : Collections.emptyList();
             } catch (Exception e) {
