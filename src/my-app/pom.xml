@@ -9,7 +9,7 @@
     <properties>
         <compiler-plugin.version>3.15.0</compiler-plugin.version>
         <frontend-maven-plugin.version>1.15.1</frontend-maven-plugin.version>
-        <maven.compiler.release>25</maven.compiler.release>
+        <maven.compiler.release>17</maven.compiler.release>
         <node.version>v22.14.0</node.version>
         <pnpm.version>v10.6.5</pnpm.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -63,6 +63,18 @@
     </dependencies>
 
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <excludes>
+                    <exclude>web/node_modules/**</exclude>
+                    <exclude>web/src/**</exclude>
+                    <exclude>web/package.json</exclude>
+                    <exclude>web/pnpm-lock.yaml</exclude>
+                    <exclude>web/vite.config.js</exclude>
+                </excludes>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>${quarkus.platform.group-id}</groupId>

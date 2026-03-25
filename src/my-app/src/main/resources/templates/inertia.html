@@ -6,6 +6,10 @@
     <title>QuarkFlow</title>
     {#if viteDev}
     <script type="module" src="{viteDevServer}/@vite/client"></script>
+    {#else}
+    {#for css in cssFiles}
+    <link rel="stylesheet" href="{css}">
+    {/for}
     {/if}
 </head>
 <body>

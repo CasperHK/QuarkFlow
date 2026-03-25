@@ -47,5 +47,5 @@ nb-configuration.xml
 # Frontend
 src/main/resources/web/node_modules/
 src/main/resources/web/.vite/
-src/main/resources/META-INF/resources/assets/
+src/main/resources/META-INF/
 node/
