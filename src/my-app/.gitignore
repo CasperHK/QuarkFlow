@@ -43,3 +43,9 @@ nb-configuration.xml
 /.quarkus/cli/plugins/
 # TLS Certificates
 .certs/
+
+# Frontend
+src/main/resources/web/node_modules/
+src/main/resources/web/.vite/
+src/main/resources/META-INF/resources/assets/
+node/
